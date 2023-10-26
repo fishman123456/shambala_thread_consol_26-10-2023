@@ -47,10 +47,10 @@ namespace shambala_thread_consol_26_10_2023
             thread2.Join();
             Console.Write("");
         }
-        static void Main(string[] args)
-        {
-            run();
-            Console.Write("");
-        }
+        //static void Main(string[] args)
+        //{
+        //    run();
+        //    Console.Write("");
+        //}
     }
 }
