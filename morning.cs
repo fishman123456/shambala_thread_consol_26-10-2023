@@ -22,7 +22,7 @@ namespace shambala_thread_consol_26_10_2023
         static void WarmKettle()
         {
             Console.WriteLine("Согреть чайник: start");
-            Thread.Sleep(3000);
+            Thread.Sleep(10000);
             Console.WriteLine("Согреть чайник: stop");
         }
 
@@ -43,12 +43,13 @@ namespace shambala_thread_consol_26_10_2023
         static void AsincMorning()
         {
             Thread thread1 = new Thread(WarmKettle);
-            Thread thread = new Thread(TakeShower);
-            thread.Start();
+            //Thread thread = new Thread(TakeShower);
+            //thread.Start();
             thread1.Start();
-            thread.Join();
-            thread1.Join();
+            //thread.Join();
+            TakeShower();
             TakeSandwich();
+            thread1.Join();
         }
         static void Main(string[] args)
         {
